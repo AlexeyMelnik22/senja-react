@@ -1,0 +1,29 @@
+<svg width="1037" height="1000" viewBox="0 0 1037 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M518.224 745.469C664.302 745.469 782.721 626.936 782.721 480.718C782.721 334.501 664.302 215.968 518.224 215.968C372.146 215.968 253.726 334.501 253.726 480.718C253.726 626.936 372.146 745.469 518.224 745.469Z" fill="#FFDEC9"/>
+<path opacity="0.4" d="M518.224 745.469C664.302 745.469 782.721 626.936 782.721 480.718C782.721 334.501 664.302 215.968 518.224 215.968C372.146 215.968 253.726 334.501 253.726 480.718C253.726 626.936 372.146 745.469 518.224 745.469Z" fill="url(#paint0_linear_6_563)"/>
+<path opacity="0.4" d="M518.224 999.437C804.431 999.437 1036.45 767.199 1036.45 480.718C1036.45 194.238 804.431 -38 518.224 -38C232.017 -38 0 194.238 0 480.718C0 767.199 232.017 999.437 518.224 999.437Z" fill="url(#paint1_radial_6_563)"/>
+<defs>
+<linearGradient id="paint0_linear_6_563" x1="518.224" y1="745.469" x2="518.224" y2="215.968" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0"/>
+<stop offset="0.1" stop-color="#FFFEFC" stop-opacity="0.02"/>
+<stop offset="0.23" stop-color="#FFFAF3" stop-opacity="0.08"/>
+<stop offset="0.36" stop-color="#FFF5E4" stop-opacity="0.18"/>
+<stop offset="0.5" stop-color="#FFEDCF" stop-opacity="0.31"/>
+<stop offset="0.65" stop-color="#FFE3B4" stop-opacity="0.48"/>
+<stop offset="0.81" stop-color="#FFD794" stop-opacity="0.7"/>
+<stop offset="0.97" stop-color="#FFC86E" stop-opacity="0.94"/>
+<stop offset="1" stop-color="#FFC565"/>
+</linearGradient>
+<radialGradient id="paint1_radial_6_563" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(518.224 480.718) rotate(180) scale(518.224 518.718)">
+<stop stop-color="white"/>
+<stop offset="0.1" stop-color="white" stop-opacity="0.98"/>
+<stop offset="0.23" stop-color="white" stop-opacity="0.92"/>
+<stop offset="0.36" stop-color="white" stop-opacity="0.83"/>
+<stop offset="0.5" stop-color="white" stop-opacity="0.69"/>
+<stop offset="0.65" stop-color="white" stop-opacity="0.52"/>
+<stop offset="0.81" stop-color="white" stop-opacity="0.31"/>
+<stop offset="0.96" stop-color="white" stop-opacity="0.06"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>
