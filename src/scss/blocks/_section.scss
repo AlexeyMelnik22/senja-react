@@ -1,0 +1,44 @@
+@use "../../scss/helpers" as *;
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  &.blocks {
+    background-color: #3B0017;
+    position: relative;
+    z-index: 5;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .blocks__inner {
+      text-align: center;
+    }
+    .blocks__title {
+      color: var(--color-light);
+      font-weight: 500;
+    }
+    .blocks__column {
+      display: flex;
+      gap: rem(23);
+      margin-top: fluid(100, 50);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .blocks__block {
+      width: fluid(372, 150 );
+      height:  fluid(374, 160);
+      border-radius: rem(10);
+      overflow: hidden;
+      transition: .3s;
+      &:hover {
+        transform: translateY(-20px);
+      }
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+}

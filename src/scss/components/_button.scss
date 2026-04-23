@@ -1,0 +1,29 @@
+@use "../../scss/helpers" as *;
+
+.btn {
+	position: relative;
+	border-radius: rem(17);
+	@include fluid-text(28, 16);
+	font-weight: 400;
+	padding: rem(18) rem(32);
+	text-align: center;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: normal;
+	white-space: nowrap;
+	text-transform: uppercase;
+	box-shadow: none;
+	transition: .3s;
+	z-index: 1;
+	&__primary {
+		position: relative;
+		overflow: hidden;
+		color: var(--color-light);
+		background-color: #3b0017;
+		&:hover, &:focus, &.active {
+			background-color: #2e0113;
+		}
+	}
+}

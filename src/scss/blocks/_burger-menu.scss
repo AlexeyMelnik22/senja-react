@@ -1,0 +1,23 @@
+@use "../../scss/helpers" as *;
+
+.burger__button {
+	display: none;
+	flex-direction: column;
+	row-gap: rem(5);
+	@include mobile {
+		display: flex;
+	}
+	.burger__line {
+		width: rem(25);
+		height: rem(3);
+		border-radius: rem(50);
+		background-color: var(--color-dark);
+	}
+}
+.header__light {
+	.burger__button {
+		.burger__line {
+			background-color: var(--color-light);
+		}
+	}
+}

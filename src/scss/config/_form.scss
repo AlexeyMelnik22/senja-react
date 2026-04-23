@@ -1,0 +1,91 @@
+@use "../../scss/helpers" as *;
+
+//hide input number's arrows
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance:textfield;
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	transition: background-color 9999s ease-in-out 0s !important;
+	-webkit-text-fill-color: var(--text-primary) !important;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.input__field {
+	display: flex;
+	position: relative;
+	width: 100%;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: rem(16);
+	label {
+		margin-bottom: rem(4);
+		font-weight: 500;
+		font-size: rem(15);
+		line-height: 140%;
+		color: #717680;
+	}
+}
+.input__control, .textarea__control {
+	width: 100%;
+	height: fluid(46, 38);
+	padding: rem(8) rem(12);
+	border-radius: rem(8);
+	outline: none;
+	border: 1px solid #d5d7da;
+	color: var(--color-gray-40);
+	transition: var(--transition-duration);
+	&:focus {
+		-webkit-box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.39);
+		box-shadow: 0 0 0 4px #f4ebff;
+	}
+	&.valid {
+		border-color: #32d583;
+		+.helper-text {
+			color: #32d583;
+		}
+	}
+	&.invalid {
+		border-color: #f97066;
+		+.helper-text {
+			color: #f97066;
+		}
+	}
+	&.disabled, &:disabled {
+		background-color: #f3f4f6;
+		cursor: default;
+		pointer-events: none;
+	}
+}
+.textarea__control {
+	height: rem(115);
+	resize: none;
+	border-radius: rem(8);
+}
+
+.helper-text {
+	margin-top: rem(4);
+	color: var(--color-grey);
+	font-size: em(13);
+	position: relative;
+	bottom: 0;
+}

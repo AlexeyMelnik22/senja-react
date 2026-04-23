@@ -1,0 +1,30 @@
+@use "../helpers" as *;
+
+:root {
+	--text: #000000;
+	--text-h: #3B0017;
+	--bg: linear-gradient(0deg, #ffccce 0%, #ffc5c7 18%, #ffb1b3 46%, #ff9093 78%, #ff7679 100%);
+	--accent: #3B0017;
+	--color-light: #ffffff;
+	--color-dark: #000000;
+	--link: var(--text);
+
+
+
+	--sans: "Rubik", system-ui, 'Segoe UI', Roboto, sans-serif;
+	--heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+	--mono: ui-monospace, Consolas, monospace;
+
+	font: 16px/145% var(--sans);
+	letter-spacing: 0.18px;
+	color-scheme: light dark;
+	color: var(--text);
+	background: var(--bg);
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	--container-width: #{rem(1800)};
+	--container-padding-x: #{rem(16)};
+}

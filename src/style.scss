@@ -1,0 +1,18 @@
+@use "scss/config/normalize";
+@use "scss/config/fonts";
+@use "scss/config/root";
+@use "scss/config/scrollbar";
+
+// main settings, classes
+@use "scss/config/base";
+
+//components
+@use "scss/components/button";
+
+//blocks
+@use "scss/blocks/burger-menu";
+@use "scss/blocks/section";
+@use "scss/blocks/hero";
+
+//header
+@use "scss/header";

@@ -1,0 +1,95 @@
+import React, {useState} from 'react';
+import {Link} from "react-router-dom";
+import Logo from '/logo.svg'
+import LogoLight from '/logo__light.svg'
+
+const Header = ({isScrolled }) => {
+
+    const [menu, setMenu] = useState("")
+
+    const onOpenMenu = ()=> {
+        setMenu("is-active")
+    }
+    const onCloseMenu = ()=> {
+        setMenu("")
+    }
+    return (
+        <header className={`header ${isScrolled ? 'header__light' : ''}`}>
+            <div className="container header__inner">
+                {isScrolled ? (
+                    <div className="header__logo">
+                        <Link aria-label="Home" title="Home" className="logo" to="/">
+                            <svg className="logo__image" width={138} height={36}>
+                                <use href={`${LogoLight}`}/>
+                            </svg>
+                        </Link>
+                    </div>
+                ):
+                    (
+                        <div className="header__logo">
+                            <Link aria-label="Home" title="Home" className="logo" to="/">
+                                <svg className="logo__image" width={138} height={36}>
+                                    <use href={`${Logo}`}/>
+                                </svg>
+                            </Link>
+                        </div>
+                    )
+                }
+
+                <nav className={`header__nav ${menu && "is-active"}`}>
+                    <ul className="header__nav--list">
+                        <li className="header__nav--item">
+                            <Link aria-label="Discover" title="Discover" className="header__nav--link" to="/">
+                                Discover
+                            </Link>
+                        </li>
+                        <li className="header__nav--item">
+                             <Link aria-label="Our Service" title="Our Service" className="header__nav--link" to="/">
+                                 Our Service
+                            </Link>
+                        </li>
+                        <li className="header__nav--item">
+                             <Link aria-label="About Us" title="About Us" className="header__nav--link" to="/">
+                                 About Us
+                            </Link>
+                        </li>
+                        <li className="header__nav--item">
+                             <Link aria-label="Contact" title="Contact" className="header__nav--link" to="/">
+                                 Contact
+                            </Link>
+                        </li>
+                    </ul>
+                    <button
+                        type="button"
+                        className="header__nav-close"
+                        onClick={onCloseMenu}
+                    >
+                        <svg
+                            className="icon"
+                            width={24}
+                            height={25}
+                            viewBox="0 0 24 25"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M19.5459 18.4541C19.7572 18.6654 19.876 18.952 19.876 19.2509C19.876 19.5498 19.7572 19.8365 19.5459 20.0478C19.3346 20.2592 19.0479 20.3779 18.749 20.3779C18.4501 20.3779 18.1635 20.2592 17.9521 20.0478L12 14.0937L6.0459 20.0459C5.83455 20.2573 5.54791 20.376 5.24902 20.376C4.95014 20.376 4.66349 20.2573 4.45215 20.0459C4.2408 19.8346 4.12207 19.5479 4.12207 19.2491C4.12207 18.9502 4.2408 18.6635 4.45215 18.4522L10.4062 12.5L4.45402 6.54593C4.24268 6.33459 4.12395 6.04795 4.12395 5.74906C4.12395 5.45017 4.24268 5.16353 4.45402 4.95218C4.66537 4.74084 4.95201 4.62211 5.2509 4.62211C5.54978 4.62211 5.83643 4.74084 6.04777 4.95218L12 10.9062L17.954 4.95125C18.1654 4.7399 18.452 4.62117 18.7509 4.62117C19.0498 4.62117 19.3364 4.7399 19.5478 4.95125C19.7591 5.16259 19.8778 5.44924 19.8778 5.74812C19.8778 6.04701 19.7591 6.33365 19.5478 6.545L13.5937 12.5L19.5459 18.4541Z"
+                                fill="black"
+                            />
+                        </svg>
+                    </button>
+                </nav>
+                <button
+                    className="header__burger-menu burger__button visible-mobile icon-menu"
+                    onClick={onOpenMenu}
+                >
+                    <span className="burger__line"/>
+                    <span className="burger__line"/>
+                    <span className="burger__line"/>
+                </button>
+            </div>
+        </header>
+    );
+};
+
+export default Header;
