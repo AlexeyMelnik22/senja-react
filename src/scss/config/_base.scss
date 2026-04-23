@@ -18,12 +18,12 @@ body {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	min-height: 100dvh;
+	min-height: 100svh;
 	width: 100%;
 	overflow: hidden;
 }
 .main {
-	height: 100vh;
+	height: 100svh;
 	overflow-y: auto;
 	scroll-snap-type: y mandatory;
 	scroll-behavior: smooth;
